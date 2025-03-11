@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Talha",
+  lastName: "Noman",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
+  role: "Frontend Engineer",
+  avatar: "/images/avatar1.jpg",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Urdu"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -29,12 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/talhanoman",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/talha-noman-21924a181/",
   },
   {
     name: "X",
@@ -44,7 +44,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:talha@weteck.co",
   },
 ];
 
@@ -52,10 +52,10 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Frontend Engineer  Mobile App Developer</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
+      I'm Talha, a frontend engineer at <InlineCode>WeTeck</InlineCode>, where I craft intuitive
       <br /> user experiences. After hours, I build my own projects.
     </>
   ),
@@ -63,8 +63,8 @@ const home = {
 
 const about = {
   label: "About",
-  title: "About me",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  title: "About Me",
+  description: `Meet Talha Noman, Senior Frontend Engineer at WeTeck from Pakistan.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -74,59 +74,54 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com", // Update if you have a personal scheduling link
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Talha is a Pakistan-based Senior Frontend Engineer with over 6 years of experience in web 
+        and mobile application development. He specializes in building scalable, high-performance 
+        applications using Next.js, React, and React Native. Talha has a strong focus on 
+        pixel-perfect UI development, API integrations, and optimizing SaaS applications. 
+        He is also experienced in OpenAI integrations, chatbot development, and building 
+        real-time collaboration tools.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "WeTeck",
+        timeframe: "Present",
+        role: "Senior Frontend Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Leading frontend development for SaaS platforms, integrating OpenAI-powered 
+            features, and optimizing application performance.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Developed TeaConnect, a SaaS solution for restaurant businesses featuring 
+            AI-powered review responses, real-time chat, and multi-platform support.
+          </>,
+          <>
+            Built a Canva-like editor using Polotno Studio, enabling users to create 
+            custom graphics with ease.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "A'stechware",
+        timeframe: "Previously",
+        role: "Frontend Web Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Developed and maintained web applications, ensuring high performance 
+            and seamless user experiences.
           </>,
         ],
         images: [],
@@ -134,58 +129,53 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Self-Taught Developer",
+        description: <>Gained expertise in frontend development, mobile app development, and SaaS applications.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Next.js",
+        description: <>Expert in building high-performance web applications with Next.js (App & Pages Routing).</>,
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "React Native",
+        description: <>Developing cross-platform mobile applications with a focus on smooth UX/UI.</>,
+        images: [],
+      },
+      {
+        title: "Polotno Studio",
+        description: <>Built a fully functional design editor for a SaaS platform.</>,
+        images: [],
+      },
+      {
+        title: "OpenAI API",
+        description: <>Integrated AI-powered features into web applications, such as AI-generated responses and chatbots.</>,
+        images: [],
+      },
+      {
+        title: "Firebase",
+        description: <>Experienced in Firebase for authentication, real-time database, and cloud functions.</>,
+        images: [],
+      },
+      {
+        title: "Stock Market Analysis",
+        description: <>Knowledgeable in Pakistan stock market investments and stock derivatives.</>,
+        images: [],
       },
     ],
   },
 };
+
 
 const blog = {
   label: "Blog",
@@ -210,9 +200,9 @@ const gallery = {
   // Images from https://pexels.com
   images: [
     {
-      src: "/images/gallery/img-01.jpg",
+      src: "/images/gallery/Copywhiz.jpeg",
       alt: "image",
-      orientation: "vertical",
+      orientation: "horizontal",
     },
     {
       src: "/images/gallery/img-02.jpg",
@@ -220,17 +210,17 @@ const gallery = {
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-03.jpg",
+      src: "/images/gallery/EekoMobile.png",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-04.jpg",
+      src: "/images/gallery/Eeko.jpeg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-05.jpg",
+      src: "/images/gallery/TeaConnect.png",
       alt: "image",
       orientation: "horizontal",
     },
