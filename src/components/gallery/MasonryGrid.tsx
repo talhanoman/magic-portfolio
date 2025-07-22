@@ -14,6 +14,7 @@ export default function MasonryGrid() {
   };
 
   return (
+
     <Masonry
       breakpointCols={breakpointColumnsObj}
       className={styles.masonryGrid}
@@ -29,6 +30,7 @@ export default function MasonryGrid() {
           src={image.src}
           alt={image.alt}
           className={styles.gridItem}
+          objectFit={"contain"}
         />
       ))}
     </Masonry>

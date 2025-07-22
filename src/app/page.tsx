@@ -7,6 +7,7 @@ import { baseURL, routes } from "@/app/resources";
 import { home, about, person, newsletter } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
+import { VideoSection } from "@/components/VideoSection";
 
 export async function generateMetadata() {
   const title = home.title;
@@ -97,6 +98,15 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
+      {home.video.display && (
+        <VideoSection
+          title={home.video.title}
+          description={home.video.description}
+          videoSrc={home.video.src}
+          posterSrc={home.video.poster}
+          
+        />
+      )}
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>

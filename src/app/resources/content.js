@@ -14,7 +14,7 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Hire {person.firstName} for your next project</>,
   description: (
     <>
       I occasionally write about design, technology, and share thoughts on the intersection of
@@ -59,6 +59,13 @@ const home = {
       <br /> user experiences. After hours, I build my own projects.
     </>
   ),
+  video: {
+    display: true,
+    title: "Follow My Journey",
+    description: "Get to know me better through this personal introduction",
+    src: "https://youtu.be/MjbkmdAspPc",
+    poster: "/images/youtubeCover.png",
+  },
 };
 
 const about = {
@@ -81,11 +88,11 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Talha is a Pakistan-based Senior Frontend Engineer with over 6 years of experience in web 
-        and mobile application development. He specializes in building scalable, high-performance 
-        applications using Next.js, React, and React Native. Talha has a strong focus on 
-        pixel-perfect UI development, API integrations, and optimizing SaaS applications. 
-        He is also experienced in OpenAI integrations, chatbot development, and building 
+        Talha is a Pakistan-based Senior Frontend Engineer with over 6 years of experience in web
+        and mobile application development. He specializes in building scalable, high-performance
+        applications using Next.js, React, and React Native. Talha has a strong focus on
+        pixel-perfect UI development, API integrations, and optimizing SaaS applications.
+        He is also experienced in OpenAI integrations, chatbot development, and building
         real-time collaboration tools.
       </>
     ),
@@ -100,15 +107,15 @@ const about = {
         role: "Senior Frontend Engineer",
         achievements: [
           <>
-            Leading frontend development for SaaS platforms, integrating OpenAI-powered 
+            Leading frontend development for SaaS platforms, integrating OpenAI-powered
             features, and optimizing application performance.
           </>,
           <>
-            Developed TeaConnect, a SaaS solution for restaurant businesses featuring 
+            Developed TeaConnect, a SaaS solution for restaurant businesses featuring
             AI-powered review responses, real-time chat, and multi-platform support.
           </>,
           <>
-            Built a Canva-like editor using Polotno Studio, enabling users to create 
+            Built a Canva-like editor using Polotno Studio, enabling users to create
             custom graphics with ease.
           </>,
         ],
@@ -120,7 +127,7 @@ const about = {
         role: "Frontend Web Developer",
         achievements: [
           <>
-            Developed and maintained web applications, ensuring high performance 
+            Developed and maintained web applications, ensuring high performance
             and seamless user experiences.
           </>,
         ],
@@ -163,8 +170,23 @@ const about = {
         images: [],
       },
       {
+        title: "Tanstack / React Query",
+        description: <>Experienced in Tanstack Query for data fetching and caching.</>,
+        images: [],
+      },
+      {
+        title: "RevenueCat",
+        description: <>Experienced in RevenueCat for in-app purchases and subscriptions.</>,
+        images: [],
+      },
+      {
+        title: "Supabase",
+        description: <>Experienced in Supabase for authentication, RLS,  real-time database, and edge functions.</>,
+        images: [],
+      },
+      {
         title: "Firebase",
-        description: <>Experienced in Firebase for authentication, real-time database, and cloud functions.</>,
+        description: <>Experienced in Firebase for authentication, real-time database, firestore, and cloud functions.</>,
         images: [],
       },
       {
@@ -195,79 +217,36 @@ const work = {
 
 const gallery = {
   label: "Gallery",
-  title: "My photo gallery",
+  title: "My Work gallery",
   description: `A photo collection by ${person.name}`,
   // Images from https://pexels.com
   images: [
+    
     {
-      src: "/images/gallery/Copywhiz.jpeg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/EekoMobile.png",
+      src: "/images/gallery/Classic2.jpeg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/Eeko.jpeg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/TeaConnect.png",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
+      src: "/images/gallery/Classic3.jpeg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
+      src: "/images/gallery/Classic5.jpeg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
+      src: "/images/gallery/Classic4.jpeg",
       alt: "image",
       orientation: "vertical",
     },
+   
     {
-      src: "/images/gallery/img-12.jpg",
+      src: "/images/gallery/Classic1.jpeg",
       alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
-      orientation: "horizontal",
+      orientation: "vertical",
     },
   ],
 };
