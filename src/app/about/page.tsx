@@ -12,8 +12,17 @@ import {
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
+import CalendarButton from "@/components/about/CalendarButton";
 import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
+import Script from "next/script";
+
+// Add Cal.com type declarations
+declare global {
+  interface Window {
+    Cal?: any;
+  }
+}
 
 export async function generateMetadata() {
   const title = about.title;
@@ -91,6 +100,43 @@ export default function About() {
           }),
         }}
       />
+      {/* Cal.com Script */}
+      <Script
+        id="cal-com-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function (C, A, L) { 
+              let p = function (a, ar) { a.q.push(ar); }; 
+              let d = C.document; 
+              C.Cal = C.Cal || function () { 
+                let cal = C.Cal; 
+                let ar = arguments; 
+                if (!cal.loaded) { 
+                  cal.ns = {}; 
+                  cal.q = cal.q || []; 
+                  d.head.appendChild(d.createElement("script")).src = A; 
+                  cal.loaded = true; 
+                } 
+                if (ar[0] === L) { 
+                  const api = function () { p(api, arguments); }; 
+                  const namespace = ar[1]; 
+                  api.q = api.q || []; 
+                  if(typeof namespace === "string"){
+                    cal.ns[namespace] = cal.ns[namespace] || api;
+                    p(cal.ns[namespace], ar);
+                    p(cal, ["initNamespace", namespace]);
+                  } else p(cal, ar); 
+                  return;
+                } 
+                p(cal, ar); 
+              }; 
+            })(window, "https://app.cal.com/embed/embed.js", "init");
+            Cal("init", "30min", {origin:"https://app.cal.com"});
+            Cal.ns["30min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#5A93FC"},"dark":{"cal-brand":"#5A93FC"}},"hideEventTypeDetails":false,"layout":"month_view"});
+          `,
+        }}
+      />
       {about.tableOfContent.display && (
         <Column
           left="0"
@@ -138,31 +184,7 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
-              <Flex
-                fitWidth
-                border="brand-alpha-medium"
-                className={styles.blockAlign}
-                style={{
-                  backdropFilter: "blur(var(--static-space-1))",
-                }}
-                background="brand-alpha-weak"
-                radius="full"
-                padding="4"
-                gap="8"
-                marginBottom="m"
-                vertical="center"
-              >
-                <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Flex paddingX="8">Schedule a call</Flex>
-                <IconButton
-                  href={about.calendar.link}
-                  data-border="rounded"
-                  variant="secondary"
-                  icon="chevronRight"
-                />
-              </Flex>
-            )}
+            {about.calendar.display && <CalendarButton />}
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>

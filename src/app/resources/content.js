@@ -14,11 +14,10 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Hire {person.firstName} for your next project</>,
+  title: <>Hiring for next project</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I'm currently available for new opportunities. Let's discuss how I can help bring your ideas to life.
     </>
   ),
 };
@@ -46,6 +45,11 @@ const social = [
     icon: "email",
     link: "mailto:talha@weteck.co",
   },
+  {
+    name : "Upwork",
+    icon : "upwork",
+    link : "https://www.upwork.com/freelancers/talhanoman5"
+  }
 ];
 
 const home = {

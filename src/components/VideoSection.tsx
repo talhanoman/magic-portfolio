@@ -49,8 +49,8 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
 
   return (
     <RevealFx translateY="16" delay={0.8}>
-      <Column maxWidth="l" gap="l" horizontal="center">
-        <Column maxWidth="m" gap="m" horizontal="center">
+      <Column maxWidth="l" gap="l" horizontal="center" fillWidth>
+        <Column maxWidth="m" gap="m" horizontal="center" paddingX="m">
           <Heading variant="display-strong-s" wrap="balance">
             {title}
           </Heading>
@@ -65,40 +65,30 @@ export const VideoSection: React.FC<VideoSectionProps> = ({
           border="neutral-weak"
           background="neutral-weak"
           data-border="rounded"
+          fillWidth
         >
-          {isYouTube ? (
-            <iframe
-              className={styles.video}
-              src={embedUrl}
-              title={title}
-              frameBorder={0}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-                style={{
-                  minWidth: "700px",
-                  width: "100%",
-                  height: "500px",
-                  borderRadius: "12px",
-                  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-                }}
-            />
-          ) : (
-            <video
-              className={styles.video}
-              controls
-              poster={posterSrc}
-              preload="metadata"
-              style={{
-                width: "100%",
-                height: "auto",
-                borderRadius: "12px",
-                boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-              }}
-            >
-              <source src={videoSrc} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          )}
+          <div className={styles.videoContainer}>
+            {isYouTube ? (
+              <iframe
+                className={styles.video}
+                src={embedUrl}
+                title={title}
+                frameBorder={0}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            ) : (
+              <video
+                className={styles.video}
+                controls
+                poster={posterSrc}
+                preload="metadata"
+              >
+                <source src={videoSrc} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )}
+          </div>
         </Card>
       </Column>
     </RevealFx>

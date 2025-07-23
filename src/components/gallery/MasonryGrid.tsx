@@ -30,7 +30,7 @@ export default function MasonryGrid() {
           src={image.src}
           alt={image.alt}
           className={styles.gridItem}
-          objectFit={"contain"}
+          objectFit={"contain"}          
         />
       ))}
     </Masonry>
