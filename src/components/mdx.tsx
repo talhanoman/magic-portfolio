@@ -146,9 +146,15 @@ type CustomMDXProps = MDXRemoteProps & {
   components?: typeof components;
 };
 
-export function CustomMDX(props: CustomMDXProps) {
+export async function CustomMDX(props: CustomMDXProps) {
   return (
-    // @ts-ignore: Suppressing type error for MDXRemote usage
-    <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />
+    <MDXRemote
+      {...props}
+      options={{
+        blockJS: false,
+        ...props.options,
+      }}
+      components={{ ...components, ...(props.components || {}) }}
+    />
   );
 }
