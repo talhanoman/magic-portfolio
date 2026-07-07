@@ -56,12 +56,13 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Frontend Engineer  Mobile App Developer</>,
+  headline: <>Building AI-Powered Mobile Apps & SaaS Products</>,
   subline: (
     <>
-      I'm Talha, a frontend engineer at <InlineCode>WeTeck</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
+    I'm Talha, a React Native developer and product engineer helping
+    <br />
+    founders turn ideas into production-ready mobile apps used by real users.
+  </>
   ),
   video: {
     display: true,
